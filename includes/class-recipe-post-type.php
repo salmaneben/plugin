@@ -20,7 +20,8 @@ class Recipe_Post_Type {
             'search_items' => __('Search Recipes', 'recipe-challenge-pro'),
             'not_found' => __('No recipes found', 'recipe-challenge-pro'),
             'not_found_in_trash' => __('No recipes found in trash', 'recipe-challenge-pro'),
-            'menu_name' => __('Recipes', 'recipe-challenge-pro')
+            'menu_name' => __('Recipes', 'recipe-challenge-pro'),
+            'all_items' => __('All Recipes', 'recipe-challenge-pro')
         );
         
         $args = array(
@@ -29,14 +30,23 @@ class Recipe_Post_Type {
             'publicly_queryable' => true,
             'show_ui' => true,
             'show_in_menu' => true,
+            'show_in_admin_bar' => true,
+            'menu_position' => 25,
+            'menu_icon' => 'dashicons-food',
             'query_var' => true,
             'rewrite' => array('slug' => 'recipe'),
             'capability_type' => 'post',
             'has_archive' => true,
             'hierarchical' => false,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-food',
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'revisions'),
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+                'comments',
+                'custom-fields',
+                'revisions'
+            ),
             'show_in_rest' => true,
             'rest_base' => 'recipes',
             'rest_controller_class' => 'WP_REST_Posts_Controller'
@@ -52,6 +62,8 @@ class Recipe_Post_Type {
             'singular_name' => __('Cuisine', 'recipe-challenge-pro'),
             'search_items' => __('Search Cuisines', 'recipe-challenge-pro'),
             'all_items' => __('All Cuisines', 'recipe-challenge-pro'),
+            'parent_item' => __('Parent Cuisine', 'recipe-challenge-pro'),
+            'parent_item_colon' => __('Parent Cuisine:', 'recipe-challenge-pro'),
             'edit_item' => __('Edit Cuisine', 'recipe-challenge-pro'),
             'update_item' => __('Update Cuisine', 'recipe-challenge-pro'),
             'add_new_item' => __('Add New Cuisine', 'recipe-challenge-pro'),
@@ -75,6 +87,8 @@ class Recipe_Post_Type {
             'singular_name' => __('Course', 'recipe-challenge-pro'),
             'search_items' => __('Search Courses', 'recipe-challenge-pro'),
             'all_items' => __('All Courses', 'recipe-challenge-pro'),
+            'parent_item' => __('Parent Course', 'recipe-challenge-pro'),
+            'parent_item_colon' => __('Parent Course:', 'recipe-challenge-pro'),
             'edit_item' => __('Edit Course', 'recipe-challenge-pro'),
             'update_item' => __('Update Course', 'recipe-challenge-pro'),
             'add_new_item' => __('Add New Course', 'recipe-challenge-pro'),
