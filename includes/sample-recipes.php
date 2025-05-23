@@ -1,0 +1,2 @@
+<?php
+// Sample recipe importer

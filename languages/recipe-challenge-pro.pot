@@ -1,0 +1,142 @@
+## languages/recipe-challenge-pro.pot
+
+```
+# Translation template for Recipe Challenge Pro
+# Copyright (C) 2024 Recipe Challenge
+# This file is distributed under the same license as the Recipe Challenge Pro package.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Recipe Challenge Pro 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-recipe-post-type.php:15
+msgid "Recipes"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:16
+msgid "Recipe"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:17
+msgid "Add New Recipe"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:18
+msgid "Edit Recipe"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:19
+msgid "New Recipe"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:20
+msgid "View Recipe"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:21
+msgid "Search Recipes"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:22
+msgid "No recipes found"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:23
+msgid "No recipes found in trash"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:52
+msgid "Cuisines"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:53
+msgid "Cuisine"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:73
+msgid "Courses"
+msgstr ""
+
+#: includes/class-recipe-post-type.php:74
+msgid "Course"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:15
+msgid "Recipe Details"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:24
+msgid "Recipe Ingredients"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:33
+msgid "Recipe Instructions"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:50
+msgid "Prep Time (minutes):"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:55
+msgid "Cook Time (minutes):"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:60
+msgid "Total Time (minutes):"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:65
+msgid "Servings:"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:70
+msgid "Difficulty:"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:72
+msgid "Easy"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:73
+msgid "Medium"
+msgstr ""
+
+#: includes/class-recipe-meta-boxes.php:74
+msgid "Hard"
+msgstr ""
+
+#: templates/recipe-ingredients.php:15
+msgid "Ingredients"
+msgstr ""
+
+#: templates/recipe-instructions.php:15
+msgid "Instructions"
+msgstr ""
+
+#: templates/single-recipe.php:25
+msgid "Jump to Recipe"
+msgstr ""
+
+#: templates/single-recipe.php:30
+msgid "Print Recipe"
+msgstr ""
+
+#: templates/single-recipe.php:35
+msgid "Add to Favorites"
+msgstr ""
+
+#: templates/single-recipe.php:35
+msgid "Remove from Favorites"
+msgstr ""
+```
+
+Now, let me also provide the Arabic translation files:
