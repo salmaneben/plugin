@@ -46,11 +46,11 @@ class Recipe_Meta_Boxes {
         ?>
         <div class="recipe-meta-box">
             <p>
-                <label for="recipe_prep_time"><?php _e('Prep Time (minutes)', 'recipe-challenge-pro'); ?></label>
+                <label for="recipe_prep_time"><?php _e('Preparation Time (minutes)', 'recipe-challenge-pro'); ?></label>
                 <input type="number" id="recipe_prep_time" name="recipe_prep_time" value="<?php echo esc_attr($prep_time); ?>" min="0" />
             </p>
             <p>
-                <label for="recipe_cook_time"><?php _e('Cook Time (minutes)', 'recipe-challenge-pro'); ?></label>
+                <label for="recipe_cook_time"><?php _e('Cooking Time (minutes)', 'recipe-challenge-pro'); ?></label>
                 <input type="number" id="recipe_cook_time" name="recipe_cook_time" value="<?php echo esc_attr($cook_time); ?>" min="0" />
             </p>
             <p>
@@ -58,11 +58,11 @@ class Recipe_Meta_Boxes {
                 <input type="number" id="recipe_total_time" name="recipe_total_time" value="<?php echo esc_attr($total_time); ?>" min="0" />
             </p>
             <p>
-                <label for="recipe_servings"><?php _e('Servings', 'recipe-challenge-pro'); ?></label>
+                <label for="recipe_servings"><?php _e('Number of Servings', 'recipe-challenge-pro'); ?></label>
                 <input type="number" id="recipe_servings" name="recipe_servings" value="<?php echo esc_attr($servings); ?>" min="1" />
             </p>
             <p>
-                <label for="recipe_difficulty"><?php _e('Difficulty', 'recipe-challenge-pro'); ?></label>
+                <label for="recipe_difficulty"><?php _e('Recipe Difficulty', 'recipe-challenge-pro'); ?></label>
                 <select id="recipe_difficulty" name="recipe_difficulty">
                     <option value="easy" <?php selected($difficulty, 'easy'); ?>><?php _e('Easy', 'recipe-challenge-pro'); ?></option>
                     <option value="medium" <?php selected($difficulty, 'medium'); ?>><?php _e('Medium', 'recipe-challenge-pro'); ?></option>
@@ -196,8 +196,6 @@ class Recipe_Meta_Boxes {
                 }
             }
             update_post_meta($post_id, '_recipe_ingredients', $ingredients);
-        } else {
-            delete_post_meta($post_id, '_recipe_ingredients');
         }
         
         // Save instructions
@@ -209,8 +207,6 @@ class Recipe_Meta_Boxes {
                 }
             }
             update_post_meta($post_id, '_recipe_instructions', $instructions);
-        } else {
-            delete_post_meta($post_id, '_recipe_instructions');
         }
     }
 }
