@@ -33,7 +33,6 @@ require_once RCP_PLUGIN_DIR . 'includes/class-recipe-favorites.php';
 require_once RCP_PLUGIN_DIR . 'includes/class-recipe-widgets.php';
 require_once RCP_PLUGIN_DIR . 'includes/class-recipe-blocks.php';
 require_once RCP_PLUGIN_DIR . 'includes/recipe-functions.php';
-require_once RCP_PLUGIN_DIR . 'includes/sample-recipes.php';
 
 // Initialize plugin
 class Recipe_Challenge_Pro {
@@ -48,13 +47,12 @@ class Recipe_Challenge_Pro {
     }
     
     private function __construct() {
-        $this->init_hooks();
+        add_action('plugins_loaded', array($this, 'init_plugin'));
     }
     
-    private function init_hooks() {
-        add_action('init', array($this, 'load_textdomain'));
-        add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_assets'));
-        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_assets'));
+    public function init_plugin() {
+        $this->load_textdomain();
+        $this->init_hooks();
         
         // Initialize classes
         new Recipe_Post_Type();
@@ -65,6 +63,11 @@ class Recipe_Challenge_Pro {
         new Recipe_Frontend();
         new Recipe_Favorites();
         new Recipe_Blocks();
+    }
+    
+    public function init_hooks() {
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_assets'));
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_assets'));
     }
     
     public function load_textdomain() {
@@ -100,7 +103,10 @@ class Recipe_Challenge_Pro {
 }
 
 // Initialize plugin
-add_action('plugins_loaded', array('Recipe_Challenge_Pro', 'get_instance'));
+function rcp_init() {
+    return Recipe_Challenge_Pro::get_instance();
+}
+add_action('plugins_loaded', 'rcp_init');
 
 // Activation hook
 register_activation_hook(__FILE__, 'rcp_activate');
